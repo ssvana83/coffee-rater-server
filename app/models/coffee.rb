@@ -1,6 +1,6 @@
 class Coffee < ApplicationRecord
-  belongs_to :user
+  # belongs_to :user
   has_many :reviews
-  has_many :reviewers, through: :reviews, source: :user
+  has_many :coffees, through: :reviews
   
 end

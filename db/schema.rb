@@ -17,10 +17,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_31_150945) do
     t.string "roaster_location"
     t.string "aroma"
     t.integer "roast_level"
-    t.integer "user_id", null: false
+    # t.integer "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_coffees_on_user_id"
+    # t.index ["user_id"], name: "index_coffees_on_user_id"
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -39,5 +39,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_31_150945) do
     t.datetime "updated_at", null: false
   end
 
-  # add_foreign_key "coffees", "users"
+  
 end

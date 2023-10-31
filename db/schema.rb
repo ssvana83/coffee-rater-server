@@ -23,6 +23,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_31_150945) do
     # t.index ["user_id"], name: "index_coffees_on_user_id"
   end
 
+  # this is my joins table..this is where my through will live
   create_table "reviews", force: :cascade do |t|
     t.string "review"
     t.integer "user_id", null: false

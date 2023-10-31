@@ -1,3 +1,7 @@
 class ApplicationRecord < ActiveRecord::Base
-  primary_abstract_class
+  self.abstract_class = true
 end
+
+
+# this is abstract, it doesnt need a table here 
+

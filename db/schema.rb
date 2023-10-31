@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_10_31_141501) do
+ActiveRecord::Schema[7.0].define(version: 2023_10_31_150945) do
   create_table "coffees", force: :cascade do |t|
     t.string "name"
     t.string "coffee_origin"
@@ -23,6 +23,14 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_31_141501) do
     t.index ["user_id"], name: "index_coffees_on_user_id"
   end
 
+  create_table "reviews", force: :cascade do |t|
+    t.string "review"
+    t.integer "user_id", null: false
+    t.integer "coffee_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "username"
     t.string "email"
@@ -31,5 +39,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_31_141501) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "coffees", "users"
+  # add_foreign_key "coffees", "users"
 end

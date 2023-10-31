@@ -4,6 +4,15 @@ class CoffeesController < ApplicationController
     coffees = Coffee.all
     render json: coffees, status: :ok
   end
+
+  def show
+    coffee = Coffee.find_by(id: params[:id])
+    if coffee 
+      render json: coffee
+    else
+      render json: {error: "No such Coffee exists"}, status: :not_found
+    end
+  end
   
 end
 

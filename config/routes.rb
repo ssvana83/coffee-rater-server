@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
 
   resources :coffees
-  # resources is a macro that creates all of the RESTful routes:
+  # resources generator is a macro that blows up and creates all of the RESTful routes:
   # get "/coffees", to: "coffee#index"
   resources :reviews
   

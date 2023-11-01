@@ -14,13 +14,13 @@ coffee_six = Coffee.create(name: "Red Fox", coffee_origin: "Sabanilla, Costa Ric
 coffee_seven = Coffee.create(name: "Ironclad Coffee Roasters", coffee_origin: "Gedeb District, Ethiopia", roaster_location: "Richmond, Virginia", aroma: "Medium-Light", roast_level: "5")
 
 
-Review.create(user_id: u1.id, coffee_id: coffee_one.id, review: "Richly complex, dazzling classic. Black currant, orange blossom, toffe, Meyer lemon. Syrupy mouthfeel. Lingering finish.")
-Review.create(user_id: u2.id, coffee_id: coffee_two.id, review: "Richly fruit-forward, deep toned. Black cherry, fudge, tangerine zest, amber. High-toned acidity. Crisply sweet-tart.")
-Review.create(user_id: u3.id, coffee_id: coffee_three.id, review: "Bright-toned, richly sweet. Pineapple, tamarind, apple blossom. Crisp acidity. Viscous mouthfeel.")
-Review.create(user_id: u4.id, coffee_id: coffee_four.id, review: "Complex, lyrically sweet. Nectarine, bergamont, nougat, wisteria. Sweetly tart structure. Silky mouthfeel. ")
-Review.create(user_id: u5.id, coffee_id: coffee_five.id, review: "Floral and deeply fruity. Guava, praline, cane sugar, kumquat. Winy acidity. Full mouthfeel")
-Review.create(user_id: u1.id, coffee_id: coffee_six.id, review: "Aromatic, full-bodied, balanced. Pink grapefruit, lilac, bay leaf, rambutan. Brisk acidity. Long flavor-laden finish.")
-Review.create(user_id: u1.id, coffee_id: coffee_seven.id, review: "Complexly fruit-layered, floral. Star jasmine, wild raspberry, lychee, cocoa nib. Resonant finish. ")
+Review.create(user_id: u1.id, coffee_id: coffee_one.id, content: "Richly complex, dazzling classic. Black currant, orange blossom, toffe, Meyer lemon. Syrupy mouthfeel. Lingering finish.")
+Review.create(user_id: u2.id, coffee_id: coffee_two.id, content: "Richly fruit-forward, deep toned. Black cherry, fudge, tangerine zest, amber. High-toned acidity. Crisply sweet-tart.")
+Review.create(user_id: u3.id, coffee_id: coffee_three.id, content: "Bright-toned, richly sweet. Pineapple, tamarind, apple blossom. Crisp acidity. Viscous mouthfeel.")
+Review.create(user_id: u4.id, coffee_id: coffee_four.id, content: "Complex, lyrically sweet. Nectarine, bergamont, nougat, wisteria. Sweetly tart structure. Silky mouthfeel. ")
+Review.create(user_id: u5.id, coffee_id: coffee_five.id, content: "Floral and deeply fruity. Guava, praline, cane sugar, kumquat. Winy acidity. Full mouthfeel")
+Review.create(user_id: u1.id, coffee_id: coffee_six.id, content: "Aromatic, full-bodied, balanced. Pink grapefruit, lilac, bay leaf, rambutan. Brisk acidity. Long flavor-laden finish.")
+Review.create(user_id: u1.id, coffee_id: coffee_seven.id, content: "Complexly fruit-layered, floral. Star jasmine, wild raspberry, lychee, cocoa nib. Resonant finish. ")
 
 
 puts("done seeding")

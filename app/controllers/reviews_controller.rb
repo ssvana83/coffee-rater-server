@@ -1,7 +1,7 @@
 class ReviewsController < ApplicationController
 
   def index
-    review = Review.all
-    render json: review, include: :coffee
+    reviews = Review.all
+    render json: reviews
   end
 end

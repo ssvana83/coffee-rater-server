@@ -5,15 +5,30 @@ class CoffeesController < ApplicationController
     render json: coffees, status: :ok
   end
 
+  # def show
+  #   coffee = Coffee.find_by(id: params[:id])
+  #   if coffee 
+  #     render json: coffee
+  #   else
+  #     render json: {error: "No such Coffee exists"}, status: :not_found
+  #   end
+  # end
+
   def show
     coffee = Coffee.find_by(id: params[:id])
     if coffee 
-      render json: coffee
-    else
-      render json: {error: "No such Coffee exists"}, status: :not_found
+      if params[:include_reviews] == 'true'
+        reviews = coffee.reviews
+        render json: { coffee: coffee, reveiws: reviews }
+      else
+        render json: coffee
+      end
+    else   
+      render json: { error: "No such Coffee exists" }, status: :not_found
     end
   end
-  
+
+
 end
 
 

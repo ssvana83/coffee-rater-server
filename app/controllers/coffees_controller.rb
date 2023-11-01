@@ -28,6 +28,8 @@ class CoffeesController < ApplicationController
     end
   end
 
+  # can now access reviews for each coffee in URL with this: /coffees/1?include_reviews=true
+
 
 end
 

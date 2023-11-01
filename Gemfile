@@ -42,6 +42,7 @@ group :development, :test do
 end
 
 group :development do
+gem 'active_model_serializers', '~> 0.10.0'
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
 end

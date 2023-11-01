@@ -27,9 +27,7 @@ class CoffeesController < ApplicationController
       render json: { error: "No such Coffee exists" }, status: :not_found
     end
   end
-
   # can now access reviews for each coffee in URL with this: /coffees/1?include_reviews=true
-
 
 end
 

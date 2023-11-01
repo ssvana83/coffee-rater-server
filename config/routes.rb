@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
 
-
   resources :coffees
   # resources generator is a macro that blows up and creates all of the RESTful routes:
-  # get "/coffees", to: "coffee#index"
+  # get "/coffees", to: "coffee#index" 
   resources :reviews
   
   resources :users
@@ -12,8 +11,10 @@ Rails.application.routes.draw do
   delete "signout", to: "sessions#destroy"
   post "/signup", to: "users#create"
   
+  
+
 end
 
 
-# get request for coffees informs system to go look in the coffee controller and find
-#  the index action
+# 1. GET req. for coffees tells to go look in the coffee_controller and find index action
+# 2. Order matters! Pattern matching happens from top to bottom.

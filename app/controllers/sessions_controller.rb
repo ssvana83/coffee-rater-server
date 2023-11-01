@@ -11,4 +11,9 @@ class SessionsController < ApplicationController
     end
   end
 
+
+  def destroy
+    session.clear
+  end
+
 end

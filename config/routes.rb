@@ -11,10 +11,6 @@ Rails.application.routes.draw do
   get "/me", to: "users#show"
   delete "signout", to: "sessions#destroy"
   post "/signup", to: "users#create"
-
-  resources :users do
-    get 'coffees', on: :member
-  end
   
 end
 

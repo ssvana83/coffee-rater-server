@@ -14,6 +14,7 @@ class UsersController < ApplicationController
 
 
   def show                                                # This will GET current user
+    
     render json: @current_user, status: :ok
   end
 

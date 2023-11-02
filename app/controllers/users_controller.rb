@@ -3,7 +3,7 @@ class UsersController < ApplicationController
 
   def index
     user = User.all
-    render json: user, include: :reviews
+    render json: user   #, include: :reviews
   end
 
   def create
@@ -13,7 +13,7 @@ class UsersController < ApplicationController
   end
 
 
-  def show
+  def show                                                # This will GET current user
     render json: @current_user, status: :ok
   end
 

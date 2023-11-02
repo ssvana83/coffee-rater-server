@@ -1,7 +1,7 @@
 class SessionsController < ApplicationController
   skip_before_action :authorized!, only: [:create]
 
-  def create
+  def create                                                            # This is for user to signin
     user = User.find_by(email: params[:email])
     if user && user.authenicate(params[:password])
       session[:user_id] = user.id
@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
   end
 
 
-  def destroy
+  def destroy                                                          # This is for user to signout
     session.clear
   end
 

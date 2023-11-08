@@ -10,10 +10,8 @@ Rails.application.routes.draw do
   get "/me", to: "users#show"
   delete "signout", to: "sessions#destroy"
   post "/signup", to: "users#create"
-
-  # add a block to create a route that gives user/id/coffees
   
-  
+  get '/myreviews', to: 'users#show_my_reviews'
 
 end
 

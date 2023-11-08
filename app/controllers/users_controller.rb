@@ -26,6 +26,15 @@ class UsersController < ApplicationController
     end
   end
 
+  def show_my_reviews
+    user = User.find_by(id: session[:user_id])
+    reviews = user.reviews 
+    render json: reviews, status: :ok
+  end
+
+  # get '/myreviews', to: 'users#show_my_reviews'
+  # Create a route that returns all the reviews for a user 
+  # and the name of the coffee that the review was written for
 
   private
   def user_params

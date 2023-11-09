@@ -22,7 +22,9 @@ class ReviewsController < ApplicationController
   end
 
   def destroy
-  
+    review = @current_user.reviews.find(params[:id])
+    review.delete 
+    head :no_content
   end
 
 
